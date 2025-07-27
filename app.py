@@ -33,7 +33,7 @@ def get_astronaut_by_attribute(iss_status):
         flag_emoji = get_flag_emoji(flag_code)
         st.subheader(f"{name} {flag_emoji}")
         st.markdown(f"Land: {country}")
-        st.image(image, caption="Sunrise by the mountains")
+        st.image(image, width=200, caption="Sunrise by the mountains")
 
 # Ausgabe der ISS-Besatzung
 st.title("ISS Besatzung")
