@@ -28,6 +28,28 @@ https://docs.streamlit.io/deploy/tutorials/docker#install-docker-engine
 
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04#step-3-using-the-docker-command
 
+## build the container
+
+docker build -t space .
+
+## List running Images or Images
+
+docker images
+
+docker ps
+
+## Docker Administration
+
+docker container ls -a
+docker image ls
+docker container rm <container_id>
+docker image rm <image_id>
+
+### Killt alles !!!!
+docker system prune -a
+
+## run the container
+
 docker run -p 80:80 app
 
 docker run -d -p 80:80 space
