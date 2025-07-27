@@ -11,7 +11,7 @@ st.title(f"Es befinden sich {people} Menschen im Weltraum")  # Display the numbe
 
 # Informationen rund um Crewmitglieder der ISS
 st.markdown("### ISS Crew Members")  # Title for the ISS crew members section
-st.image(expeditionImage, width=600, caption="The crew of the ISS")  # Display the expedition image of ISS
+st.image(expeditionImage, caption="The crew of the ISS")  # Display the expedition image of ISS
 
 # Function to convert flag_code to emoji
 def get_flag_emoji(flag_code):
@@ -33,26 +33,19 @@ def get_astronaut_by_attribute(iss_status):
         flag_emoji = get_flag_emoji(flag_code)
         st.subheader(f"{name} {flag_emoji}")
         st.markdown(f"Land: {country}")
-        st.image(image, width=200, caption="Sunrise by the mountains")
+        st.image(image, caption="Sunrise by the mountains")
 
 # Ausgabe der ISS-Besatzung
-st.title("ISS Besatzung")
-get_astronaut_by_attribute(iss_status=True)
+tab1, tab2 = st.tabs(["ISS", "Tiangong"])
 
-# Ausgabe der Tiangong-Besatzung
-st.title("Tiangong Besatzung")
-get_astronaut_by_attribute(iss_status=False)
+with tab1:
+    st.title("Crew of the ISS")
+    st.divider(width="stretch")
+    get_astronaut_by_attribute(iss_status=True)
+with tab2:
+    st.title("Crew of the Tiangong")
+    st.divider(width="stretch")
+    get_astronaut_by_attribute(iss_status=False)
 
-col1, col2, col3 = st.columns(3)
+  
 
-with col1:
-    st.header("A cat")
-    st.image("https://static.streamlit.io/examples/cat.jpg")
-
-with col1:
-    st.header("A dog")
-    st.image("https://static.streamlit.io/examples/dog.jpg")
-
-with col2:
-    st.header("An owl")
-    st.image("https://static.streamlit.io/examples/owl.jpg")
