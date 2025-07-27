@@ -7,7 +7,7 @@ data = r.json()
 
 people = data["number"]
 expeditionImage = data["expedition_image"]
-st.title(f"Es befinden sich {people} Menschen im Weltraum")  # Display the number of people in space
+st.title(f"LL Es befinden sich {people} Menschen im Weltraum")  # Display the number of people in space
 
 # Informationen rund um Crewmitglieder der ISS
 st.markdown("### ISS Crew Members")  # Title for the ISS crew members section
