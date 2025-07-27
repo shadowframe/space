@@ -28,6 +28,17 @@ https://docs.streamlit.io/deploy/tutorials/docker#install-docker-engine
 
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04#step-3-using-the-docker-command
 
+docker push registry.digitalocean.com/shadowframe/space
+
+docker tag local-image:tagname new-repo:tagname
+docker push new-repo:tagname
+
+### auth!
+https://www.digitalocean.com/community/questions/unable-to-push-to-container-registry
+
+### for strato / plesk
+docker save -o ~/Downloads/images/space.tar space
+
 ## build the container
 
 docker build -t space .
