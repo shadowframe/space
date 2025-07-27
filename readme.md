@@ -1,4 +1,5 @@
 source .venv/bin/activate
+
 streamlit run app.py
 
 https://docs.streamlit.io/deploy/tutorials/docker#install-docker-engine
