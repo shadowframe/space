@@ -15,6 +15,8 @@ source .venv/bin/activate
 
 pip install streamlit
 
+pip install streamlit-extras
+
 ## programm ausführen
 * statt app.py kann jeds streamlit programm ausgeführt werden
 
